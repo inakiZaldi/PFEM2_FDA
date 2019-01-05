@@ -6,7 +6,10 @@
 \usepackage{amsmath}
 \usepackage[dvips]{graphicx}
 
+%%%%%%%%%% NEW COMMANDS
+\newcommand{\vect}[1]{\boldsymbol{#1}}
 
+%%%%%%%%%% 
 \begin{document}
 
 \title{Studying the performance and accuracy of PFEM-2 in the solution of biomedical benchmarks}
@@ -24,7 +27,16 @@ States
 \end{abstract}
 
 
-
 \section{Introduction}
 \input{introduction.tex}
+
+\section{Equations of Motion}
+\input{eqofmot.tex}
+
+\section{Numerical Method}
+\input{num.tex}
+
+\begin{thebibliography}{9}
+  \input{references.tex}
+\end{thebibliography}
 \end{document}

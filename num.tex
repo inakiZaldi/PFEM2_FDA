@@ -1,0 +1,12 @@
+The numerical scheme used in the approximation of the system of Eq. (\ref{eq:mom}-\ref{eq:cont}) is based on the FEM. The Galerkin method will be used with a $p1-p1$ interpolation space for the pressure-velocity pair. Furthermore the discrete model will be decoupled by means of a fractional step method as in \cite{codina-soto}. To simplify the presentation a backward difference time integration scheme was used for the time derivative of $\vect{u}$. 
+
+\begin{align}\label{eq:masamat}
+\rho \textbf{M}\vect{u}^\star+\Delta 
+t\mu\textbf{K}\vect{u}^{\star} +\rho\textbf{S}(\bar{\vect{u}}^{n+1})\vect{u}^{\star}  &=\rho \textbf{M}\vect{u}^n- \Delta 
+t\textbf{G}p^n+\Delta t \textbf{F},
+\\\label{eq:matpres2}
+\frac{\Delta t}{\rho} \textbf{L}p^{n+1}&=\textbf{D}\vect{u}^\star+ \frac{\Delta 
+t}{\rho}\textbf{L}  p^{n}-\tilde{\textbf{U}},
+\\\label{eq:matunm2}
+\rho \bar{\textbf{M}}\vect{u}^{n+1}&=\rho \bar{\textbf{M}}\vect{u}^\star-\Delta t\textbf{G}(p^{n+1}- p^n),
+\end{align}
