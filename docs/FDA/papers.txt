@@ -1,0 +1,30 @@
+
+
+FDA results references
+
+Assessment of CFD Performance in Simulations of an Idealized Medical Device: Results of FDA’s First Computational Interlaboratory Study
+https://www.dynalook.com/15th-international-ls-dyna-conference/biomedical/cfd-validations-with-fda-benchmarks-of-medical-devices-flows
+
+
+NOZZLE:
+
+MAIN ARTICLE:
+Multilaboratory Particle Image Velocimetry Analysis of the FDA Benchmark Nozzle Model to Support Validation of Computational Fluid Dynamics Simulations
+http://biomechanical.asmedigitalcollection.asme.org/article.aspx?articleid=1421446
+
+Results of FDA’s First Interlaboratory Computational Study of a Nozzle with a Sudden Contraction and Conical Diffuser
+https://link.springer.com/article/10.1007/s13239-013-0166-2
+
+RESULTS:
+Assessment of CFD Performance in Simulations of an Idealized Medical Device: Results of FDA’s First Computational Interlaboratory Study
+https://link.springer.com/article/10.1007/s13239-012-0087-5
+
+
+Multilaboratory Study of Flow‐Induced Hemolysis Using the FDA Benchmark Nozzle Model
+https://onlinelibrary.wiley.com/doi/abs/10.1111/aor.12368
+
+Large eddy simulation of the FDA benchmark nozzle for a Reynolds number of 6500
+https://www.sciencedirect.com/science/article/pii/S0010482514000067
+
+FDA Benchmark Medical Device Flow Models for CFD Validation
+https://journals.lww.com/asaiojournal/Fulltext/2017/03000/FDA_Benchmark_Medical_Device_Flow_Models_for_CFD.9.aspx

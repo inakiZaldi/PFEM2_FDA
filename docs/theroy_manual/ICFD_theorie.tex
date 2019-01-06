@@ -1,0 +1,68 @@
+% LSTC test case template test
+%
+%  This is a latex structured template for LSTC test cases
+%
+%  format and parameter specification
+\input{./include_files/test_case_specification}   % test case specific input parameters
+\input{./include_files/test_case_document_format} % input test case document format
+%
+% start document
+\begin{document}
+  \input{./include_files/test_case_titlepage}                       % include title page
+  \pagebreak
+  \setcounter{page}{1}
+  \pagenumbering{roman}                                             % change page numbering to roman
+  \input{./include_files/disclaimer_public}                         % include disclaimer
+  \pagebreak
+  \input{./include_files/test_case_document_information}            % include document information
+  \input{./include_files/test_case_table_of_content}                % include table of content
+  \setcounter{page}{1}
+  \pagenumbering{arabic}                                            % change page numbering to arabic
+%
+\section{Introduction}
+  \input{./include_files/test_case_introduction_purpose}            % include purpose of this document
+  \clearpage
+% 
+\section{Document Information}
+  \input{./include_files/test_case_information_summary}             % include test case information summary
+  \clearpage 
+%
+\section{Notations and physical variables}
+  \input{./include_files/3_Notations}                         % include test case purpose
+  \clearpage
+\section{The ICFD solver}
+  \input{./include_files/4.1_NS_equations}                         % include test case purpose
+  \clearpage 
+  \input{./include_files/4.2_FS_method}               % include test case model description
+  \clearpage
+\input{./include_files/4.3_FEM_discretization}               % include test case model description
+  \clearpage
+\input{./include_files/4.4_Stabilization_term}               % include test case model description              % include test case model description
+  \clearpage
+\input{./include_files/4.5_Watching_analysis}               % include test case model description
+  \clearpage
+%
+
+
+\section{Structure and Thermal coupling}
+  \input{./include_files/5_FSI}                         % include test case purpose
+  \clearpage
+  \input{./include_files/5.2_thermal}                         % include test case purpose
+  \clearpage
+\section{Free surface and mutliphase handling}
+\input{./include_files/6_Levelset}  
+\clearpage
+
+\section{Turbulence models}
+  \input{./include_files/7_Turbulence}                         % include test case purpose
+  \clearpage
+\section{The Volume Mesher}
+ \input{./include_files/Volume_mesher}  
+\clearpage
+%
+\input{./include_files/test_case_bibliography}                    % include test case bibliography
+%
+\appendix
+\input{./include_files/units}  % include test case purpose
+  \clearpage
+\end{document}
