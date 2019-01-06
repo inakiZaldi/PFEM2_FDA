@@ -13,12 +13,10 @@
 \begin{document}
 
 \title{Studying the performance and accuracy of PFEM-2 in the solution of biomedical benchmarks}
-\author{Facundo Del Pin$^1$   Chien-Jung Huang$^{1}$  
-  I\~naki Caldichoury$^1$ Rodrigo R. Paz$^1$ \\  \\
-$^1$Livermore Software Technology Corporation\\ Livermore,  CA, United
-States
-}
-
+\author{Facundo Del Pin\and Chien-Jung Huang\and I\~naki Caldichoury\and Rodrigo R. Paz}
+\date{Livermore Software Technology Corporation\\ Livermore,  CA, United
+States\\[2ex]
+\today}
 
 \maketitle
 
@@ -34,7 +32,18 @@ States
 \input{eqofmot.tex}
 
 \section{Numerical Method}
-\input{num.tex}
+  \input{num.tex}
+ \subsection{The PFEM-2 method}
+  \input{pfem2_form.tex}
+ \subsection{Parallel Implementation}
+
+\section{Numerical results}
+\subsection{Nozzle}
+\subsection{Pump}
+\subsection{Vena Cava}
+
+\section{Conclusions}
+
 
 \begin{thebibliography}{9}
   \input{references.tex}
