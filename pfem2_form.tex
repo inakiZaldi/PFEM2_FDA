@@ -1,1 +1,8 @@
-The PFEM-2 method...
+The PFEM-2 method is a generalization of the Particle Finite Element Method (PFEM) \cite{sergio:pfem} where the particles are not restricted to the mesh nodes. Massless particles are added everywhere in the mesh and the advection is done by transporting the particles. The main benefit is that now the nodes of the mesh do not have to be moved as was the case in \cite{sergio:pfem} saving many re-meshing operations while maintaining the Lagrangian advection. In \cite{sergio:xivs1} Idelsohn et al. present an integration scheme called {\em eXplicit Integration following the Velocity Streamlines} (X-IVS) which is used to integrate the trajectory of particles in PFEM-2. Using this technique the position of a particle $p$ at time $t^n$ ($x_p^{n+1})$ is computed using the velocity streamlines at $t^n$:
+
+\begin{equation}
+  \begin{cases}
+    x_p^{n+1}=x_p^n+\int_n^{n+1} u^n(x_p^\tau) d\tau\\
+    \hat{u}^{n+1}_p=u_p^n
+  \end{cases}
+\end{equation}
