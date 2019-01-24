@@ -21,3 +21,39 @@ In summary  this means that each particle will be able to travel more than one e
 \end{figure}
 
 In figure \ref{fig:xivs} the trajectory of a particle is computed using the X-IVS method and it is compared to the trajectory of a first order integration scheme for a $CFL>1$. 
+
+Once the particles are moved to their new $t^{n+1}$ position the field $\phi$ that they transport (velocity, temperature, level set, etc.) needs to be mapped back to the mesh to perform the FEM analysis. Several approaches have been presented in \cite{gimenez:tesis}. In the current work the  Global Least Squares Consistent (GLSC) has been implemented and applyed to our test cases. This approach solves a minimization problem where the approximation functions are the same linear shape functions used bt the FEM discretization. This results in a global system where the unknowns are the nodal values. The minimization problem will solve for $\phi$ such that the minimaze a global error function $E_g$ which computes the quadratic difference between the particle states $\phi_p$ at positions $\vect{x}_p$ surrounding a node at postion $\vect{x}_j$ and the nodal value $\phi_j$:
+\begin{equation}\label{eq:minim}
+  E_g(\phi_1,\phi_2,...,\phi_j)=\frac{1}{2}\sum_{p=1}^P \biggl(\phi_p-\sum_{j=1}^J\phi_jN_j(\vect{x}_p)\biggr)^2.
+\end{equation}
+To minimize $E_g$ equation \ref{eq:minim} is derived with respect to $\phi_j$ and equaled to zero leading to the system of $J$ unknowns:
+\begin{equation}
+  \vect{M}\vect{\phi}=\vect{f}
+\end{equation}
+where $J$ is the total number of nodes in the mesh, $\vect{M}_{ij}=\sum_pN_i(\vect{x}_p)N_j(\vect{x}_p)$ is a consistent mass matrix, $\vect{\phi}$ are the unknown nodal values and $\vect{f}_i=\sum_pN_i(\vect{x}_p)\phi_p$.
+
+Another aspect of PFEM-2 which is more widely discussed in \cite{gimenez-difusion} is that of particle inventory. Essentially is the question of when, where and how to add or remove particles. In the present implementation particles are seeded into all the elements at initiallization. There is a constant amount of particles per element at the biggining of a run. The number of initial particles can change for different problems. In this work all elements are seeded with twelve initial particles in $3-d$ and nine in $2-d$. Since the objective of this paper is to evaluate the accuracy of PFEM-2 and compare it to that of FEM and experimental results then no strategy has been used to remove particles for the results presented later. The idea is to use PFEM-2 to it's full accuracy capacity and removing particles is asociated to lose of accuracy. Particles are added to the simulation to maintain a minimum amount of particles per element. This is a diference compared to \cite{gimenez-difusion} where the metric used to add particles is associated to the node. This will obviously decrease the performance of the simulation since the amount of particles will increase. The implementation relays on a robust parallel implementation to acount for the increased demand of memory and CPU due to the increase number of particle. As an example to illustrate this a simple problem considering the flow past a $2-d$ cylinder is used (see figure \ref{fig:cyl_def}). It is better to use a $2-d$ model for illustrative porpuses. In figure \ref{fig_cyl_evol} the initial configuration ``A'' is compared to an advanced configuration ``B''. Initially all elements have the same amount of particles and the distribution is homogenous. As the flow evolves particles aglomerate increasing the overall amount of particles in the domain. Finally figure \ref{fig:cyl_npart} shows a curve with the number of particles as a function of time. Note how the number of particles increase rapidly at the beggining of the simulation and then reaches a pseudo steady state.
+
+
+\begin{figure}[htp] 
+\centering 
+\includegraphics[scale=.5]{./imgs/cyl_def.png}
+\caption{Geometry definition for the $2-d$ cylinder problem and boundary conditions.}
+\label{fig:cyl_def}
+\end{figure}
+
+\begin{figure}[htp]
+\centering 
+\includegraphics[scale=.6]{./imgs/cyl_parts.png}
+\caption{Evolution of particle position and number of particles for the $2-d$ cylinder problem. A) Initial configuration and B) advanced particle configuration. }
+\label{fig:cyl_evol}
+\end{figure}
+
+\begin{figure}[htp] 
+\centering 
+\includegraphics[scale=.4]{./imgs/npart_cyl.eps}
+\caption{Number of particles as a function of a non-dimensional time for the cylinder problem. Observe how to particle number increase rapidly and then they reach a sort of steady amount.}
+\label{fig:cyl_npart}
+\end{figure}
+
+

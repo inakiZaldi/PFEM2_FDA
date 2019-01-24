@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 1">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path3835"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3829"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="544.74788"
+     inkscape:cy="375.59023"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="false"
+     inkscape:snap-global="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="-3"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3050" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#140700;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:8.00000006, 4.00000002;stroke-dashoffset:0"
+       id="rect4837"
+       width="362.27957"
+       height="424.59119"
+       x="7.0710678"
+       y="379.8591"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       y="80.647888"
+       x="40.642857"
+       id="image3047"
+       xlink:href="file:///home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_geo.png"
+       height="280.57144"
+       width="417.75348"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g4486"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3052"
+         d="m 16.071428,91.647652 24.999999,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 16.071428,115.0243 24.999999,0"
+         id="path4452"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4454"
+         d="m 16.071427,138.40094 25,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 16.071428,161.77759 24.999999,0"
+         id="path4456"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4458"
+         d="m 16.071428,185.15424 24.999999,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 16.071427,208.53089 25,0"
+         id="path4460"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4462"
+         d="m 16.071427,231.90754 25,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 16.071427,255.28418 25,0"
+         id="path4464"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4466"
+         d="m 16.071427,278.66083 25,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 16.071427,302.03748 25,0"
+         id="path4468"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4470"
+         d="m 16.071428,325.41413 24.999999,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="m 16.071428,348.79078 24.999999,0"
+         id="path4472"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       x="58.57143"
+       y="225.53758"
+       id="text4474"
+       sodipodi:linespacing="100%"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4476"
+         x="58.57143"
+         y="225.53758">V=Vin</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       x="207.85715"
+       y="103.79075"
+       id="text4478"
+       sodipodi:linespacing="100%"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4480"
+         x="207.85715"
+         y="103.79075">Vn=0</tspan></text>
+    <text
+       sodipodi:linespacing="100%"
+       id="text4482"
+       y="346.22226"
+       x="85.032471"
+       style="font-size:5.72727251px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       xml:space="preserve"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         y="346.22226"
+         x="85.032471"
+         id="tspan4484"
+         sodipodi:role="line">Vn=0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       x="420"
+       y="225.31541"
+       id="text4500"
+       sodipodi:linespacing="100%"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4502"
+         x="420"
+         y="225.31541">P=0</tspan></text>
+    <text
+       sodipodi:linespacing="100%"
+       id="text4504"
+       y="202.36218"
+       x="150"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       xml:space="preserve"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         y="202.36218"
+         x="150"
+         id="tspan4506"
+         sodipodi:role="line">V=0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Italic"
+       x="251.42857"
+       y="265.93362"
+       id="text4508"
+       sodipodi:linespacing="100%"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4510"
+         x="251.42857"
+         y="265.93362">Re=100</tspan></text>
+    <image
+       y="387.54044"
+       x="12.272727"
+       id="image4639"
+       xlink:href="file:///home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/initial.png"
+       height="228.68182"
+       width="347.72726"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       y="387.13135"
+       x="376.36365"
+       id="image4704"
+       xlink:href="file:///home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/advanced.png"
+       height="228.68182"
+       width="347.72726"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       y="622.36218"
+       x="16.363636"
+       id="image4769"
+       xlink:href="file:///home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/initial_zoom.png"
+       height="172.76424"
+       width="347.72726"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       y="622.36218"
+       x="372.27274"
+       id="image4834"
+       xlink:href="file:///home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/advanced_zoom.png"
+       height="172.76424"
+       width="347.72726"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       y="379.8591"
+       x="368.76624"
+       height="424.59119"
+       width="365.31003"
+       id="rect4839"
+       style="fill:none;stroke:#140700;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:8.00000004, 4.00000001;stroke-dashoffset:0"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <g
+       id="g4853"
+       transform="matrix(0.40909091,0,0,0.40909091,0,202.0741)"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <rect
+         y="516.03394"
+         x="710.7464"
+         height="74.313026"
+         width="62.673271"
+         id="rect4841"
+         style="fill:#ffffff;fill-opacity:1;stroke:#140700;stroke-width:4.88888884;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:9.77777778, 4.88888889;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="100%"
+         id="text4843"
+         y="572.36218"
+         x="720"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         xml:space="preserve"><tspan
+           y="572.36218"
+           x="720"
+           id="tspan4845"
+           sodipodi:role="line">A</tspan></text>
+    </g>
+    <g
+       id="g4858"
+       transform="matrix(0.40909091,0,0,0.40909091,-16.363636,202.0741)"
+       inkscape:export-filename="/home/fdelpin/Documents/Documents/Publications/NUESTRAS/PFEM2/paper_fda/imgs/cyl_parts.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#140700;stroke-width:4.88888884;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:9.77777778, 4.88888889;stroke-dashoffset:0"
+         id="rect4847"
+         width="62.673271"
+         height="74.313026"
+         x="1650.7463"
+         y="516.03394" />
+      <text
+         xml:space="preserve"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         x="1660"
+         y="572.36218"
+         id="text4849"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan4851"
+           x="1660"
+           y="572.36218">B</tspan></text>
+    </g>
+  </g>
+</svg>
