@@ -2,7 +2,7 @@ The parallel implementation for PFEM-2 follows the guidelines presnted in \cite{
 
 The current approach is built ``on top'' of a pre-existing parallel FEM implementation thus inheriting much of the data structures and methodologies. The partitions are creating using the software METIS \cite{metis}...
 
-[Load Balancing]
+In the present implementation load balancing has not being address. Extrictely speaking if particles are not removed at some point accumulation of particles in one partition will be an issue. This is something that will be address later. Most luckily the PFEM-2 impliementation will change to allow removal of particles in such a way that an almost constant amount of particles is preserved at each element. The techniques for particle inventory presented in \cite{gimenez-difusion} will be implemented.
 
 
 
