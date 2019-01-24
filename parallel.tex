@@ -1,0 +1,16 @@
+The parallel implementation for PFEM-2 follows the guidelines presnted in \cite{gimenez:parallel} for the case of distributed memory architectures. The challenges are well described in their paper but basically involves the extra amount of memory needed for the particle data structure. Due to the explicit scheme the parallel implementation needs to take care of local operations to each particle separately from the rest allowing for trivial parallelization. The dificulty arise at the interface between processors where particles may travel several elements and possible processors before finding their final host element. This task requieres an outer loop to communicate particles that will terminate when no more particles cross the interface between partitions.
+
+The current approach is built ``on top'' of a pre-existing parallel FEM implementation thus inheriting much of the data structures and methodologies. The partitions are creating using the software METIS \cite{metis}...
+
+[Load Balancing]
+
+
+
+[IMAGE WITH PARTICLES MOVING THROUGH PARTITIONS]
+
+
+
+[IMAGE SCALABILITY]
+
+
+ 
