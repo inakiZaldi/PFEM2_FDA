@@ -2,7 +2,7 @@ The parallel implementation for PFEM-2 follows the guidelines presnted in \cite{
 
 \begin{figure}[htp] 
 \centering 
-\includegraphics[scale=.4]{./imgs/parallel.eps}
+\includegraphics[scale=.6]{./imgs/parallel.eps}
 \caption{Different ways that particles may move across processor interfaces.}
 \label{fig:parallel}
 \end{figure}
@@ -10,13 +10,9 @@ The parallel implementation for PFEM-2 follows the guidelines presnted in \cite{
 
 The current approach is built ``on top'' of a pre-existing parallel FEM implementation thus inheriting much of the data structures and methodologies. The partitions are creating using the software METIS \cite{metis1,metis}...
 
-In the present implementation load balancing has not being address. Extrictely speaking if particles are not removed at some point accumulation of particles in one partition will be an issue. This is something that will be address later. Most luckily the PFEM-2 impliementation will change to allow removal of particles in such a way that an almost constant amount of particles is preserved at each element. The techniques for particle inventory presented in \cite{gimenez-difusion} will be implemented.
+In the present implementation load balancing has not being addressed. Strictly speaking if particles are not removed at some point accumulation of particles in one partition will be an issue. Most luckily the PFEM-2 impliementation will change to allow removal of particles in such a way that an almost constant amount of particles is preserved for each element. The techniques for particle inventory presented in \cite{gimenez-difusion} will be a good starting point for the implementation.
 
-
-
-[IMAGE WITH PARTICLES MOVING THROUGH PARTITIONS]
-
-
+In figure \ref{fig:scalab} the scalability of the full formulation (FEM+PFEM-2) is shown for shared memory parallelization. 
 
 [IMAGE SCALABILITY]
 

@@ -1,12 +1,19 @@
 % LaTeX/AMS-LaTeX
 
-\documentclass{article}
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+\documentclass[twocolumn]{svjour3}          % twocolumn
+
+%\documentclass{article}
 
 \usepackage{amssymb}
 \usepackage{amsmath}
 %\usepackage[dvips]{graphicx}
 \usepackage{graphicx}
-\usepackage{subcaption}
+%\usepackage{subcaption}
 
 %%%%%%%%%% NEW COMMANDS
 \newcommand{\vect}[1]{\boldsymbol{#1}}
@@ -15,15 +22,20 @@
 \begin{document}
 
 \title{Studying the performance and accuracy of PFEM-2 in the solution of biomedical benchmarks}
-\author{Facundo Del Pin\and Chien-Jung Huang\and I\~naki Caldichoury\and Rodrigo R. Paz}
-\date{Livermore Software Technology Corporation\\ Livermore,  CA, United
-States\\[2ex]
-\today}
+\author{Facundo Del Pin\and Chien-Jung Huang\and I\~naki \c{C}aldichoury\and Rodrigo R. Paz}
+\institute{Livermore Software Technology Corporation\\ Livermore,  CA, United
+States\\
+\email{fdelpin@lstc.com}\\
+\email{cjhuang@lstc.com}\\
+\email{inaki@lstc.com}\\
+\email{rpaz@lstc.com}}
+\date{\today}
 
 \maketitle
 
 \begin{abstract}
 \input{abstract.tex}
+\keywords{Particle Method \and Finite Element \and Biomedical Devices \and CFD \and Benchmarks \and FDA}
 \end{abstract}
 
 
@@ -48,7 +60,7 @@ States\\[2ex]
 
 \section{Conclusions}
 
-\clearpage
+%\clearpage
 \begin{thebibliography}{9}
   \input{references.tex}
 \end{thebibliography}
