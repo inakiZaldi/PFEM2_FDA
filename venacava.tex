@@ -19,21 +19,93 @@ Mesh & Number of element ($\times10^6$)& mesh size (mm) \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+
+\begin{figure*}[htbp]
+    \centering
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/Umag_mesh1.png}\\
+        mesh 1
+    \end{minipage}
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/Umag_mesh2.png}\\
+        mesh 2
+    \end{minipage}\\[.5\baselineskip]
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/Umag_mesh3.png}\\
+        mesh 3
+    \end{minipage}
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/Umag_mesh4.png}\\
+        mesh 4
+    \end{minipage}\\[.5\baselineskip]
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/Umag_mesh5.png}\\
+        mesh 5
+    \end{minipage}
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=.7in]{imgs/vena_cava/colormap_exercise.png}\\
+    \end{minipage}
+    \caption{The velocity magnitude fields using different sizes of mesh.}
+    \label{fig:velmag}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/LNH_mesh1.png}\\
+        mesh 1
+    \end{minipage}
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/LNH_mesh2.png}\\
+        mesh 2
+    \end{minipage}\\[.5\baselineskip]
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/LNH_mesh3.png}\\
+        mesh 3
+    \end{minipage}
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/LNH_mesh4.png}\\
+        mesh 4
+    \end{minipage}\\[.5\baselineskip]
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=2.3in]{imgs/vena_cava/LNH_mesh5.png}\\
+        mesh 5
+    \end{minipage}
+    \begin{minipage}[c][2in][c]{0.4\linewidth}
+        \centering
+        \includegraphics[width=.7in]{imgs/vena_cava/colormap_LNH.png}\\
+    \end{minipage}
+    \caption{The local normalized helicity (LNH) fields.}
+    \label{fig:lnh}
+\end{figure*}
+
+% choose either one: with  p or not with p
+\begin{table*}[h]
 \centering
 \caption {Value of maximum velocity, transverse velocity, Helicity and the correspoding convergence rates.} \label{tab:convergence}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
      & \multicolumn{2}{c|}{maximum velocity} & \multicolumn{2}{c|}{transverse velocity} & \multicolumn{2}{c|}{Helicity} \\ \hline
 Mesh & $\left |u\right |_{max} $    & p             & $\overline{\left |u\right |}_{tr}$          & p              &   $\overline{HI}$              & p           \\ \hline
-1    & 0.25486               &               & 0.02380                 &                & 0.38067         &             \\ \hline
-2    & 0.25846               &               & 0.02443                 &                & 0.41316         &             \\ \hline
-3    & 0.25666               & 1.99533743    & 0.02474                 & 2.356          & 0.43313         & 1.63        \\ \hline
-4    & 0.25409               & 0.70308244    & 0.02497                 & 0.311          & 0.44978         & 1.84        \\ \hline
-5    &                       &               &                         &                &                 &             \\ \hline
+1    & 0.2549               &               & 0.0238                 &                & 0.3807         &             \\ \hline
+2    & 0.2585               &               & 0.0244                 &                & 0.4132         &             \\ \hline
+3    & 0.2567               & 2.36       & 0.0247                 & 2.40          & 0.4331         & 1.63        \\ \hline
+4    & 0.2541               & 0.31       & 0.02497                 & 2.24          & 0.4498         & 1.84        \\ \hline
+5    & 0.2534	          &  2.16      & 0.02502                 & 2.88          & 0.4536         &  2.54        \\ \hline
 \end{tabular}
-\end{table}
-
+\end{table*}
+% 
 \iffalse
 \begin{table}[h]
 \caption {} \label{tab:convergence}
@@ -45,59 +117,41 @@ Mesh & $u_{max}$ & Transverse velocity &  Helicity       \\ \hline
 2    & 0.25846           & 0.02443        & 0.41316 \\ \hline
 3    & 0.25666           & 0.02474        & 0.43313 \\ \hline
 4    & 0.25409           & 0.02497        & 0.44978 \\ \hline
-5    &                   &                &         \\ \hline
+5     & 0.25341	      & 0.02502        & 0.45361         \\ \hline
 \end{tabular}
 \end{table}
 \fi
+%------------------------------------
 
 \subsubsection*{Comparison with Experimental Results}
 
-\begin{figure*}
-\begin{minipage}[c][9.5cm][c]{0.28\textwidth}
+\begin{figure*}\centering
+\begin{minipage}[c][10cm][c]{0.25\textwidth}
 \centering
 \vspace*{\fill}
 \includegraphics[height=4cm]{imgs/vena_cava/PIV_coronal_rest.png}
-%\subcaption*{Step 1}
-%\label{fig:process11}
-
-%\addtocounter{subfigure}{1}
 \includegraphics[height=5cm]{imgs/vena_cava/PIV_sagittal_rest.png}
-PIV
-%\subcaption*{PIV}
-%\label{fig:process13}
+\\PIV
 \end{minipage}
-\begin{minipage}[c][9.5cm][c]{0.28\textwidth}
+\begin{minipage}[c][10cm][c]{0.25\textwidth}
 \centering
 \vspace*{\fill}
 \includegraphics[height=4cm]{imgs/vena_cava/FEM_coronal_rest.png}
-%\subcaption{Step 1}
-%\label{fig:process11}
-
-%\addtocounter{subfigure}{1}
 \includegraphics[height=5cm]{imgs/vena_cava/FEM_sagittal_rest.png}
-FEM
-%\subcaption*{FEM}
-%\label{fig:process13}
+\\FEM
 \end{minipage}
-\begin{minipage}[c][9.5cm][c]{0.28\textwidth}
+\begin{minipage}[c][10cm][c]{0.25\textwidth}
 \centering
 \vspace*{\fill}
 \includegraphics[height=4cm]{imgs/vena_cava/PFEM_coronal_rest.png}
-%\subcaption{Step 1}
-%\label{fig:process11}
-
-%\addtocounter{subfigure}{1}
 \includegraphics[height=5cm]{imgs/vena_cava/PFEM_sagittal_rest.png}
-PFEM-2
-%\subcaption*{PFEM-2}
-%\label{fig:process13}
+\\PFEM-2
 \end{minipage}
-\begin{minipage}[c][9.5cm][t]{0.1\textwidth}
+\begin{minipage}[c][10cm][t]{0.1\textwidth}
 \vspace*{\fill}
 \centering
 \includegraphics[height=3cm]{imgs/vena_cava/colormap_rest.png}
-%\label{fig:process12}
-
+\\
 \end{minipage}
 \caption{The in-plane 2D velocity magnitude in coronal (top) and sagittal (bottom) planes of PIV, FEM and PFEM-2 results at resting condition}
 \label{fig:process1}
