@@ -1,3 +1,5 @@
+\subsection{Vena Cava}
+
 \subsubsection*{Grid Convergence Test}
 
 The simulations of the flow in Vena Cava are conducted according to the parameters provided in \cite{craven_cfd}. The simulations of two flowrates are performed corresponding to the rest and exercise conditions. The density is $\rho=1817$, $\nu=3.21\times10^{-6}$ (rest) and $\nu=3.02\times10^{-6}$(exercise), and flowrate $Q= 0.5$ (l/min) and $3$ (l/min) into two iliac veins separately. The corresponding Reynolds numbers for rest and exercise conditions are 236 and 1505. The flow is considered to be laminar in the Vena Cava.
@@ -91,7 +93,7 @@ Mesh & Number of element ($\times10^6$)& mesh size (mm) \\ \hline
 \end{figure*}
 
 % choose either one: with  p or not with p
-\begin{table*}[h]
+\begin{table*}[]
 \centering
 \caption {Value of maximum velocity, transverse velocity, Helicity and the correspoding convergence rates.} \label{tab:convergence}
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -157,7 +159,39 @@ Mesh & $u_{max}$ & Transverse velocity &  Helicity       \\ \hline
 \label{fig:process1}
 \end{figure*}
 
-\begin{table}[h]
+\begin{figure*}\centering
+\begin{minipage}[c][10cm][c]{0.25\textwidth}
+\centering
+\vspace*{\fill}
+\includegraphics[height=4cm]{imgs/vena_cava/PIV_coronal_exercise.png}
+\includegraphics[height=5cm]{imgs/vena_cava/PIV_sagittal_exercise.png}
+\\PIV
+\end{minipage}
+\begin{minipage}[c][10cm][c]{0.25\textwidth}
+\centering
+\vspace*{\fill}
+\includegraphics[height=4cm]{imgs/vena_cava/FEM_coronal_exercise.png}
+\includegraphics[height=5cm]{imgs/vena_cava/FEM_sagittal_exercise.png}
+\\FEM
+\end{minipage}
+\begin{minipage}[c][10cm][c]{0.25\textwidth}
+\centering
+\vspace*{\fill}
+\includegraphics[height=4cm]{imgs/vena_cava/PFEM_coronal_exercise.png}
+\includegraphics[height=5cm]{imgs/vena_cava/PFEM_sagittal_exercise.png}
+\\PFEM-2
+\end{minipage}
+\begin{minipage}[c][10cm][t]{0.1\textwidth}
+\vspace*{\fill}
+\centering
+\includegraphics[height=3cm]{imgs/vena_cava/colormap_exercise.png}
+\\
+\end{minipage}
+\caption{The in-plane 2D velocity magnitude in coronal (top) and sagittal (bottom) planes of PIV, FEM and PFEM-2 results at resting condition}
+\label{fig:process1}
+\end{figure*}
+
+\begin{table}[h!]
 \caption {Global relative error (\%) between CFD and PIV at resting condition} \label{tab:convergence}
 \centering
 \begin{tabular}{|c|c|c|}
@@ -169,14 +203,14 @@ PFEM-2 & 4.79    & 6.65     \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[h!]
 \caption {Global relative error (\%) between CFD and PIV at exercising condition} \label{tab:convergence}
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
        & Coronal & Sagittal \\ \hline
 CFD from \cite{craven_cfd}  & 10.98	&5.56 \\ \hline
-FEM    &      &    \\ \hline
-PFEM-2 &     &       \\ \hline
+FEM    &  11.28    &  5.93  \\ \hline
+PFEM-2 &  10.44   &  6.10     \\ \hline
 \end{tabular}
 \end{table}
