@@ -1,7 +1,7 @@
 % intro 
 The simulations of blood flows in nozzle, pump, and IVC with FEM and PFEM-2 are conducted and compared with experimental results in \cite{fda_res}, \cite{fda_nozzle}, \cite{fda_pump} and \cite{gallagher_exp}. The fluid is assumed to be Newtonian blood analog fluid. For the nozzle and pump flows, the fluid density and viscosity are $\rho= 1035$ kg/m\textsuperscript{3} and $\mu =3.5\times10^{-3}$ N-s/m\textsuperscript{2}, where as for the flow in IVC, the density and viscosity are $\rho=1817$ kg/m\textsuperscript{3}, $\mu=5.83\times10^{-3}$ N-s/m\textsuperscript{2} for resting condition and $\mu=5.49\times10^{-3}$ N-s/m\textsuperscript{2} for exercising condition. 
 
-\subsection{Nozzle}
+\subsection{Blood Nozzle}
 
 %  nozzle intro
 The simplified nozzle proposed by FDA consists of four parts containing characteristics of some blood-conveying medical devices. There are inlet and outlet tubes with diameter $0.012$ m, as well as a cone-shaped converging tube connecting the inlet tube with the nozzle throat with diameter $0.004$ m as shown in figure~\ref{fig:nozzlegeo1}. The flow experiences a gradual contraction of area from the inlet tube to the throat, then a sudden expansion of the area right after the throat to the outlet tube (figure~\ref{fig:nozzlegeo2}). It is set that the z cordinate along the axial direction has origin at the exit of the nozzle throat. The flow with Reynolds number $3500$ with flowrate $3.64\times10^{-5}$ m\textsuperscript{3}/s corresponding to turbulent flow regime is analyzed, where the Reynolds number is defined with the flow rate and the diameter at the throat. 
@@ -31,7 +31,7 @@ For the set up of the numericcal simlation, the simulation domain starts from $z
 % nozzle analysis
 [Comparison]
 
-\subsection{Pump}
+\subsection{Blood Pump}
 
 %  pump intro
 The geometry of the simplified centrifugal pump is shown in the figure~\ref{fig:pumpgeo} (top). The flow enters the chamber through a curved tube with diameter $12$ mm. The diameter of the inner chamber of the housing is $60$ mm and the thickness is $9$ mm. The rotor inside the chamber is with diameter $52$ mm and $4$ mm thick, along with four $3$ mm thick straight blades. The chamber is connected with a throat at its outlet, followed by a diffuser to the outlet tube with diameter $12$ mm. The pump flow with flowrate $Q = 6$ L/min and rotational speed $3500$ RPM is simulated. 
