@@ -34,7 +34,7 @@ For the set up of the numericcal simlation, the simulation domain starts from $z
 \subsection{Blood Pump}
 
 %  pump intro
-The geometry of the simplified centrifugal pump is shown in the figure~\ref{fig:pumpgeo} (top). The flow enters the chamber through a curved tube with diameter $12$ mm. The diameter of the inner chamber of the housing is $60$ mm and the thickness is $9$ mm. The rotor inside the chamber is with diameter $52$ mm and $4$ mm thick, along with four $3$ mm thick straight blades. The chamber is connected with a throat at its outlet, followed by a diffuser to the outlet tube with diameter $12$ mm. The pump flow with flowrate $Q = 6$ L/min and rotational speed $3500$ RPM is simulated. 
+The geometry of the simplified centrifugal pump is shown in the figure~\ref{fig:pumpgeo}. The flow enters the chamber through a curved tube with diameter $12$ mm. The diameter of the inner chamber of the housing is $60$ mm and the thickness is $9$ mm. The rotor inside the chamber is with diameter $52$ mm and $4$ mm thick, along with four $3$ mm thick straight blades. The chamber is connected with a throat at its outlet, followed by a diffuser to the outlet tube with diameter $12$ mm. The pump flow with flowrate $Q = 6$ L/min and rotational speed $3500$ RPM is simulated. 
 
 %% PEGGY: should these geometry figures be included?
 \begin{figure}[htbp]
@@ -52,12 +52,58 @@ The geometry of the simplified centrifugal pump is shown in the figure~\ref{fig:
 \end{figure}
 
 %  pump simulation setup
-As to the simulation set up, the velocity distribution is prescribed at the inlet (see figure~\ref{fig:pumpgeo} bottom plot), where the velocity profiles are obtained from the experimental measurements using PIV from \cite{cpi}. The pressure at the outlet is set to be constant, and the gravitational force is included. Since the goal is to predict the flow field after it reaching steady state, instead of letting the rotor rotate during simulation, the non-inertial reference frame is applied on the fluid around the rotor. This is because the flow around the rotor at steady state can be analogue to flow experiencing constant angular velocity. Using non-inertial reference frame avoids mesh distortion and frequent remeshing due to rotation. For turbulence model, the LES Smagorinsky sub-grid scale model is employed, with 7\% of turbulence intensity imposed at the inlet. 
+As to the simulation set up, the velocity distribution is prescribed at the inlet (see figure~\ref{fig:pumpgeo} bottom plot), where the velocity profiles are obtained from the experimental measurements using PIV from \cite{cpi}. The pressure at the outlet is set to be constant, and the gravitational force is included. Since the goal is to predict the flow field after it reaching steady state, instead of letting the rotor rotate during simulation, the non-inertial reference frame is applied on the fluid around the rotor. This is because the flow around the rotor at steady state can be analogue to flow experiencing constant angular velocity. Using non-inertial reference frame avoids mesh distortion and frequent remeshing due to rotation. For turbulence model, the LES Wall-Adapting Local Eddy-viscosity (WALE) model is employed, with 7\% of turbulence intensity imposed at the inlet. 
 
-[The simulation domain is decomposed into around 1 million tetrahedron elements as shown in figure ?.] 
+The simulation domain is decomposed into around 1 million tetrahedron elements. The mesh size is $0.5$ mm on the rotor blades and $0.3$ mm at the outlet of the chamber to diffuser. The mesh is locally refined around the throat as shown in figure~\ref{fig:pumpmesh}. The simulation result is obtained after $15$ rotations of the rotor, when the pump flow aleady reaches steady state. The time step size is around $10^{-5}$ s in FEM and PFEM-2 simulations at steady state so that the CFL number is less or equal than $1$.  
 
-% pump result
-[Result]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=3in]{imgs/nozzle_pump/pump_mesh.pdf}
+    \caption{The mesh configuration used in the pump flow simulation on the plane which coincides to the mid-axis plane of the outlet diffuser.}
+    \label{fig:pumpmesh}
+\end{figure}
 
-% pump analysis
-[Comparison]
+% pump result & analysis
+
+The obtained pressure difference accross the pump by experiment and simulations are listed in table~\ref{tab:pumppres}. Using FEM the discrepancy with experiment is only $3.6$\%. On the other hand, PFEM-2 predicts a much higher pressure difference. From the distribution of the velocity and pressure fields in the chamber (figure \ref{fig:pumpvel} and \ref{fig:pumppres}, it can be observed that the velocity pattern obtained with PFEM-2 is different from FEM. With PFEM-2, the velocity is higher mainly infront of the leading edge of the blade, where with FEM, the velocity is higher at both side of the blade, but more near the trailing edge. ***This might due to the nature of the partcle method that the influence of the inertia is emphasised. So the particles pushed by the blades has less tendency to turn in chamber. This leads to a larger pressure gradient in the radial direction to make the particle turn. [NEEDS CHECKING] 
+
+\begin{table}[h]
+\caption {The pressure differences accross the pump.}\label{tab:pumppres} 
+\centering
+\begin{tabular}{|c|c|}
+\hline
+ & Pressure (mmHg) \\ \hline
+Experiment \cite{mali_cfd}    & 272.38    \\ \hline
+FEM    & 282.40             \\ \hline
+PFEM-2    & 489.64          \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=3in]{imgs/nozzle_pump/pumpvel_fem.png}\\
+    \vspace{.5cm}
+    \includegraphics[width=3in]{imgs/nozzle_pump/pumpvel_pfem.png}
+    \caption{The magnitude of velocity distribution on the plane which coincides to the mid-axis plane of the outlet diffuser using FEM (top) and PFEM-2 (bottom).}
+    \label{fig:pumpvel}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=3in]{imgs/nozzle_pump/pumppres_fem.png}\\
+    \vspace{.5cm}
+    \includegraphics[width=3in]{imgs/nozzle_pump/pumppres_pfem.png}
+    \caption{The pressure distribution on the plane which coincides to the mid-axis plane of the outlet diffuser using FEM (top) and PFEM-2 (bottom).}
+    \label{fig:pumppres}
+\end{figure}
+
+Figure~\ref{fig:pumpvelprofile} depicts the comparison of velocity profile in the pump chamber and diffuser compared with experimental measurements reported in \cite{mali_cfd}. The velocity between blades by FEM is in accordance with experiments, where the result by PFEM-2 exhibits a lower slope near the blade tip. Both FEM and PFEM-2 predict the detached jet in the outlet diffuser leaning more against the outer wall. The velocity magnitude appears to be larger pbu FEM. These phenomenon may be due to using non-inertial reference frame approximation, since similar velocity distribution can also be observed in most of other numerical results also using non-inertial reference frame \cite{mali_cfd}. 
+ 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=3in]{imgs/nozzle_pump/pump_velblade.eps}\\
+    \vspace{.5cm}
+    \includegraphics[width=3in]{imgs/nozzle_pump/pump_veldiffuser.eps}
+    \caption{The magnitude of the two-dimensional velocity on the xy-plane passing the mid-axis plane of the outlet diffuser with experiments and simulations. Left: along the radial direction from the rotor center in the housing. Right: along the in the outlet diffuser. $\blacktriangledown$ $\blacktriangle$ $\blacksquare$ $\blacklozenge$: experiments \cite{mali_cfd}. Solid line: FEM. Dashed line: PFEM-2. }
+    \label{fig:pumpvelprofile}
+\end{figure}
