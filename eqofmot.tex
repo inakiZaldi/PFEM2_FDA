@@ -1,40 +1,41 @@
-The benchmarks presented in this article study the motion of incompressible flows and their interaction with rigid solid boundaries. In this case the equations of motion for the continous model are defined by the Navier-Stokes equations. Let $\Omega\subset \Re^n$ be the spatial domain at time $t\in[0,T]$ with $n$ the number of space dimensions then the system of equations is defined by:
-
-
+The benchmarks presented in this article study the motion of incompressible flows and their interaction with rigid solid boundaries. In this case the equations of motion for the continuous model are defined by the Navier-Stokes equations and the continuity equation. Let $\Omega\subset \Re^n$ be the spatial domain at time $t\in[0,T]$ with $n$ the number of space dimensions then the system of equations is defined by:
+%
 \begin{eqnarray}
 %&\rho(\partial_t\vect{u}+\vect{u} \cdot \vect{\nabla}\vect{u})-\vect{\nabla}\cdot\sigma=\vect{f} \,\,\, \text{in}\, \Omega\times[0,T] \label{eq:mom}\\
 &\rho D_t\vect{u}-\vect{\nabla}\cdot\sigma=\vect{f} \,\,\, \text{in}\, \Omega\times[0,T] \label{eq:mom}\\
 &\vect{\nabla}\cdot \vect{u}=0 \label{eq:cont} \,\,\, \text{in}\, \Omega\times[0,T] 
 \end{eqnarray}
-
+%
 where $\rho$ is the fluid density and $\vect{u}$ is the velocity, $\vect{f}$ is the body force and $\vect{\sigma}$ is the stress tensor:
-
+%
 \begin{equation}
 \vect{\sigma}=2\mu\vect{\epsilon}(\vect{u})-p\vect{I}
 \end{equation}
-
+%
 with $p$ the fluid pressure, $\mu$ the dynamic viscosity and $\vect{I}$ the identity tensor and $\vect{\epsilon}$ the strain-rate tensor defined as:
-
+%
 \begin{equation}
   \vect{\epsilon}(\vect{u})=\frac{1}{2}(\vect{\nabla}\vect{u}+\vect{\nabla}\vect{u}^t)
 \end{equation}
-
+%
 Eq. (\ref{eq:mom}) needs Dirichlet and Neuman boundary conditions expressed as:
+%
 \begin{eqnarray}
   &\vect{u}=\vect{g} \,\,\, \text{on}\, \Gamma_g\times[0,T]\\   
   &\vect{n}\cdot\vect{\sigma}=\vect{h} \,\,\, \text{on}\, \Gamma_h\times[0,T]
 \end{eqnarray}
-
+%
 where $\Gamma_g$ and $\Gamma_h$ are complementary subsets of the domain boundary $\Gamma$. The functions $\vect{g}$ and $\vect{h}$ are both given and $\vect{n}$ is the unit normal vector pointing outward from the domain.
-The initial condition is specied on the domain $\Omega$ at $t=0$:
+The initial condition is specified on the domain $\Omega$ at $t=0$:
+%
 \begin{equation}
   \vect{u}(\vect{x},0)=\vect{u}_0(\vect{x})
 \end{equation}
-
+%
 where $\vect{u}_0(\vect{x})$ is a divergence free velocity field.
 
 The expression of Eq. (\ref{eq:mom}) was written using a material derivative since this paper will deal with both a Lagrangian and a Eulerian formulation. In the case of an Eulerian framework the material derivative becomes:
 \begin{equation}
 D_t\vect{u}=\partial_t\vect{u}+\vect{u} \cdot \vect{\nabla}\vect{u}  
 \end{equation}
-It is important to note that the last term on the right hand side is non-linaer with respect to the fluid velocity $\vect{u}$.
+It is important to note that the last term on the right hand side is non-linear with respect to the fluid velocity $\vect{u}$.
