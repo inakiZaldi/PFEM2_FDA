@@ -4,7 +4,7 @@ The simulations of blood flows in nozzle, pump, and IVC with FEM and PFEM-2 are 
 \subsection{Blood Nozzle}
 
 %  nozzle intro
-The simplified nozzle proposed by FDA consists of four parts containing characteristics of some blood-conveying medical devices. There are inlet and outlet tubes with diameter $0.012$ m, as well as a cone-shaped converging tube connecting the inlet tube with the nozzle throat with diameter $0.004$ m as shown in figure~\ref{fig:nozzlegeo1}. The flow experiences a gradual contraction of area from the inlet tube to the throat, then a sudden expansion of the area right after the throat to the outlet tube (figure~\ref{fig:nozzlegeo2}). It is set that the z cordinate along the axial direction has origin at the exit of the nozzle throat. The flow with Reynolds number $3500$ with flowrate $3.64\times10^{-5}$ m\textsuperscript{3}/s corresponding to turbulent flow regime is analyzed, where the Reynolds number is defined with the flow rate and the diameter at the throat. 
+The simplified nozzle proposed by FDA consists of four parts containing characteristics of some blood-conveying medical devices. There are inlet and outlet tubes with diameter $0.012$ m, as well as a cone-shaped converging tube connecting the inlet tube with the nozzle throat with diameter $0.004$ m as shown in figure~\ref{fig:nozzlegeo1}. The flow experiences a gradual contraction of area from the inlet tube to the throat, then a sudden expansion of the area right after the throat to the outlet tube (figure~\ref{fig:nozzlegeo2}). It is set that the z coordinate along the axial direction has origin at the exit of the nozzle throat. The flow with Reynolds number $3500$ with flowrate $3.64\times10^{-5}$ m\textsuperscript{3}/s corresponding to turbulent flow regime is analyzed, where the Reynolds number is defined with the flow rate and the diameter at the throat. 
 
 %% PEGGY: should these geometry figures be included?
 \begin{figure}[htbp]
@@ -22,7 +22,7 @@ The simplified nozzle proposed by FDA consists of four parts containing characte
 
 
 %  nozzle simulation setup
-For the set up of the numerical simulation, the simulation domain starts from $z=-0.18$ m to $z=0.18$ m. The prescribed uniformly distributed velocity profile is imposed at the inlet while the pressure is constant at outlet. The Large Eddy Simulation (LES) Smagorinsky model is chosen to deal with the the turbulent flow regime in nozzle, and the Smagorinsky coefficient is set to be 0.1 empirically for flows in the pipe. The turbulence intensity is set to be $5$\% at the inlet. There are two different kinds of meshes considered in this study: mesh A with a more uniform mesh size in the outlet tube, and mesh B has a more refined mesh at certain area (figure~\ref{fig:nozzlemesh}). The mesh A has minimum mesh size $0.2$ mm and a total of $8.61$M elements. The mesh B has coarser meshes in the outlet tube than mesh A, but has mesh refinement near the exit of the throat. The minimum mesh size of mesh B is $0.1$ mm with total of $1.13$M elements. The purpose of using two distinct meshes is to for the observation of the influence of mesh on FEM and PFEM-2.\textbf{[??]} Simulations with different CFL number will also be done to examine the influence of time step size with these two methods.
+For the set up of the numerical simulation, the simulation domain starts from $z=-0.18$ m to $z=0.18$ m. The prescribed uniformly distributed velocity profile is imposed at the inlet while the pressure is constant at outlet. The Large Eddy Simulation (LES) Smagorinsky model is chosen to deal with the the turbulent flow regime in nozzle, and the Smagorinsky coefficient is set to be 0.1 empirically for flows in the pipe. The turbulence intensity is set to be $5$\% at the inlet. There are two different kinds of meshes considered in this study: mesh A with a more uniform mesh size in the outlet tube, and mesh B has a more refined mesh at certain area (figure~\ref{fig:nozzlemesh}). The mesh A has minimum mesh size $0.2$ mm and a total of $8.61$M elements. The mesh B has coarser meshes in the outlet tube than mesh A, but has mesh refinement near the exit of the throat. The minimum mesh size of mesh B is $0.1$ mm with total of $1.13$M elements. The purpose of using two distinct meshes is for the observation of the influence of mesh on FEM and PFEM-2. Simulations with different CFL number will also be done to examine the influence of time step size with these two methods.
 
 \begin{figure}[htbp]
     \centering
@@ -34,7 +34,7 @@ For the set up of the numerical simulation, the simulation domain starts from $z
 
 % nozzle result and analysis
 
-The distributions of velocity magnitude in the nozzle after reaching steady state are shown in figure \ref{fig:nozzlevelfm} and \ref{fig:nozzlevelpm}. It can be observed that the sudden expansion at the exit of the throat leads to the formation of a jet. In the turbulent regime, the center velocity of jet has a sudden decrease called jet breakdown. Most of the results show the breakdown of the jet, but with different breakdown locations. This can be shown clearly in figure~\ref{fig:nozzlemidvel} depicting the velocity along the center line of the nozzle, where the origin of the axial coordinate is at the exit of the throat (figure~\ref{fig:nozzlegeo2}). It can be observed that the results by PFEM-2 have good agreement with experimental result by \cite{hariharan_nozzle} with both meshes. Also, the results using PFEM-2 is not affected much by the time step size, since the convection terms is taken care of separately. However, for the results using FEM, it can be affected largely once CFL number is larger than 1. Also, the breakdown locations are also affected by the mesh configuration. This may be due to the additional viscosity added through the convection stabilization term in this FEM algorithm.\textbf{[NEEDS CHECKING]}
+The distributions of velocity magnitude in the nozzle after reaching steady state are shown in figure \ref{fig:nozzlevelfm} and \ref{fig:nozzlevelpm}. It can be observed that the sudden expansion at the exit of the throat leads to the formation of a jet. In the turbulent regime, the center velocity of jet has a sudden decrease called jet breakdown. Most of the results show the breakdown of the jet, but with different breakdown locations. This can be shown clearly in figure~\ref{fig:nozzlemidvel} depicting the velocity along the center line of the nozzle, where the origin of the axial coordinate is at the exit of the throat (figure~\ref{fig:nozzlegeo2}). It can be observed that the results by PFEM-2 have good agreement with experimental result by \cite{hariharan_nozzle} with both meshes. Also, the results using PFEM-2 is not affected much by the time step size, since the convection terms is taken care of separately. However, for the results using FEM, it can be affected largely once CFL number is larger than 1. Also, the breakdown locations are also affected by the mesh configuration. \textbf{CHECK}*** This may be due to the additional viscosity added through the convection stabilization term in this FEM algorithm.***
 
 \begin{figure}[htbp]
     \centering
@@ -65,9 +65,11 @@ The distributions of velocity magnitude in the nozzle after reaching steady stat
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=3.2in]{imgs/nozzle_pump/nozzle_midvel_fm.eps}
-    \includegraphics[width=3.2in]{imgs/nozzle_pump/nozzle_midvel_pm.eps}
-    \caption{The distribution of the axial velocity in the nozzle along the center line. The top figure depicts the results with mesh A using FEM+CFL1 (solid), FEM+CFL5 (dash-dotted), PFEM-2+CFL1 (dashed) and PFEM2+CFL5 (dotted). The bottom figure depicts the results with mesh B using FEM+CFL1 (solid), FEM+CFL10 (dash-dotted), PFEM-2+CFL1 (dashed) and PFEM2+CFL10 (dotted). }
+    \includegraphics[width=3.2in]{imgs/nozzle_pump/nozzle_midvel_fm2.eps}
+    \includegraphics[width=3.2in]{imgs/nozzle_pump/nozzle_midvel_pm2.eps}
+    \caption{The distribution of the axial velocity in the nozzle along the center line. The top figure depicts the results with mesh A (top) and mesh B (bottom).
+%The distribution of the axial velocity in the nozzle along the center line. The top figure depicts the results with mesh A using FEM and CFL=1 (solid), FEM and CFL=5 (dash-dotted), PFEM-2 and CFL=1 (dashed) and PFEM2 and CFL=5 (dotted). The bottom figure depicts the results with mesh B using FEM and CFL=1 (solid), FEM and CFL=10 (dash-dotted), PFEM-2 and CFL=1 (dashed) and PFEM2 and CFL=10 (dotted).
+}
     \label{fig:nozzlemidvel}
 \end{figure}
 
@@ -94,7 +96,7 @@ The geometry of the simplified centrifugal pump is shown in the figure~\ref{fig:
 %  pump simulation setup
 As to the simulation set up, the velocity distribution is prescribed at the inlet (see figure~\ref{fig:pumpgeo} bottom plot), where the velocity profiles are obtained from the experimental measurements using PIV from \cite{cpi}. The pressure at the outlet is set to be constant, and the gravitational force is included. Since the goal is to predict the flow field after it reaching steady state, instead of letting the rotor rotate during simulation, the non-inertial reference frame is applied on the fluid around the rotor. This is because the flow around the rotor at steady state can be analogue to flow experiencing constant angular velocity. Using non-inertial reference frame avoids mesh distortion and frequent remeshing due to rotation. For turbulence model, the LES Wall-Adapting Local Eddy-viscosity (WALE) model is employed, with 7\% of turbulence intensity imposed at the inlet. 
 
-The simulation domain is decomposed into around 1 million tetrahedron elements. The mesh size is $0.5$ mm on the rotor blades and $0.3$ mm at the outlet of the chamber to diffuser. The mesh is locally refined around the throat as shown in figure~\ref{fig:pumpmesh}. The simulation result is obtained after $15$ rotations of the rotor, when the pump flow aleady reaches steady state. The time step size is around $10^{-5}$ s in FEM and PFEM-2 simulations at steady state so that the CFL number is less or equal than $1$.  
+The simulation domain is decomposed into around 1 million tetrahedron elements. The mesh size is $0.5$ mm on the rotor blades and $0.3$ mm at the outlet of the chamber to diffuser. The mesh is locally refined around the throat as shown in figure~\ref{fig:pumpmesh}. The simulation result is obtained after $15$ rotations of the rotor, when the pump flow already reaches steady state. The time step size is around $10^{-5}$ s in FEM and PFEM-2 simulations at steady state so that the CFL number is less or equal than $1$.  
 
 \begin{figure}[htbp]
     \centering
@@ -105,10 +107,10 @@ The simulation domain is decomposed into around 1 million tetrahedron elements. 
 
 % pump result & analysis
 
-The obtained pressure difference accross the pump by experiment and simulations are listed in table~\ref{tab:pumppres}. Using FEM the discrepancy with experiment is only $3.6$\%. On the other hand, PFEM-2 predicts a much higher pressure difference. From the distribution of the velocity and pressure fields in the chamber (figure \ref{fig:pumpvel} and \ref{fig:pumppres}, it can be observed that the velocity pattern obtained with PFEM-2 is different from FEM. With PFEM-2, the velocity is higher mainly infront of the leading edge of the blade, where with FEM, the velocity is higher at both side of the blade, but more near the trailing edge. ***This might due to the nature of the partcle method that the influence of the inertia is emphasised. So the particles pushed by the blades has less tendency to turn in chamber. This leads to a larger pressure gradient in the radial direction to make the particle turn. \textbf{[NEEDS CHECKING]}
+The obtained pressure difference across the pump by experiment and simulations are listed in table~\ref{tab:pumppres}. Using FEM the discrepancy with experiment is only $3.6$\%. On the other hand, PFEM-2 predicts a much higher pressure difference. From the distribution of the velocity and pressure fields in the chamber (figure \ref{fig:pumpvel} and \ref{fig:pumppres}, it can be observed that the velocity pattern obtained with PFEM-2 is different from FEM. With PFEM-2, the velocity is higher mainly in front of the leading edge of the blade, where with FEM, the velocity is higher at both side of the blade, but more near the trailing edge. \textbf{CHECK:} ***This might due to in the present PFEM-2 method, the convection and viscous effect are treated separately and sequentially, and an explicit integration scheme is employed. As a result, the particles pushed by the rotor blades have less tendency to turn in chamber using PFEM-2 than FEM, which can be observed from the streamline plot in figure~\ref{fig:pumpsl}. This leads to a larger pressure gradient in the radial direction to make particles turn in the chamber. ***
 
 \begin{table}[h]
-\caption {The pressure differences accross the pump.}\label{tab:pumppres} 
+\caption {The pressure differences across the pump.}\label{tab:pumppres} 
 \centering
 \begin{tabular}{|c|c|}
 \hline
@@ -137,7 +139,16 @@ PFEM-2    & 489.64          \\ \hline
     \label{fig:pumppres}
 \end{figure}
 
-Figure~\ref{fig:pumpvelprofile} depicts the comparison of velocity profile in the pump chamber and diffuser compared with experimental measurements reported in \cite{mali_cfd}. The velocity between blades by FEM is in accordance with experiments, where the result by PFEM-2 exhibits a lower slope near the blade tip. Both FEM and PFEM-2 predict the detached jet in the outlet diffuser leaning more against the outer wall. The velocity magnitude appears to be larger pbu FEM. These phenomenon may be due to using non-inertial reference frame approximation, since similar velocity distribution can also be observed in most of other numerical results also using non-inertial reference frame \cite{mali_cfd}. 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=2.2in]{imgs/nozzle_pump/pump_sl_fem.png}\\
+    \vspace{.5cm}
+    \includegraphics[width=2.2in]{imgs/nozzle_pump/pump_sl_pfem.png}
+    \caption{The streamlines starting at the top blade on the same plane as in figure~\ref{fig:pumpvel} using FEM (top) and PFEM-2 (bottom).}
+    \label{fig:pumpsl}
+\end{figure}
+
+Figure~\ref{fig:pumpvelprofile} depicts the comparison of velocity profile in the pump chamber and diffuser compared with experimental measurements reported in \cite{mali_cfd}. The velocity between blades by FEM is in accordance with experiments, where the result by PFEM-2 exhibits a lower slope near the blade tip. Both FEM and PFEM-2 predict the detached jet in the outlet diffuser leaning more against the outer wall. The velocity magnitude appears to be larger with FEM. The phenomenon may be due to using non-inertial reference frame approximation, because similar velocity distribution can also be observed in most of other numerical results also using non-inertial reference frame \cite{mali_cfd}. 
  
 \begin{figure}[htbp]
     \centering
